@@ -7,11 +7,9 @@ public class Basket {
 
     private List<Itemable> itemList = new ArrayList<>();
 
-    private double price;
     private double totalCost;
 
-    public Basket(double price, double totalCost) {
-        this.price = price;
+    public Basket(double totalCost) {
         this.totalCost = totalCost;
     }
 
@@ -34,19 +32,14 @@ public class Basket {
         return null;
     }
 
-//    public double getPrice() {
+    public double getTotalCost() {
 //        int i;
 //        double sum = 0;
 //        for (i = 0; i < itemList.size(); i++) {
 //            sum += itemList.get(i);
 //        }
-//        price = sum;
-//        return price;
-//    }
-
-    public double getTotalCost() {
-        totalCost = price;
-        return this.totalCost;
+//        totalCost = sum;
+        return totalCost;
     }
 
 }
