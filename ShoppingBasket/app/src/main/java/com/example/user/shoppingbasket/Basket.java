@@ -1,5 +1,8 @@
 package com.example.user.shoppingbasket;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Basket {
 
     private int items;
@@ -11,6 +14,8 @@ public class Basket {
         this.price = price;
         this.totalCost = totalCost;
     }
+
+    private List<Itemable> itemList = new ArrayList<>();
 
     public double getTotalCost() {
         return this.totalCost;
