@@ -1,9 +1,9 @@
 package com.example.user.shoppingbasket;
 
-public class Item {
+public class Item implements Itemable {
 
-    public String priceSpeak() {
-        return "I have a price!";
+    public Double price() {
+        return 0.0;
     }
 
 }

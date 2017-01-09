@@ -5,33 +5,33 @@ import java.util.List;
 
 public class Basket {
 
-    private int items;
+    private List<Double> itemList = new ArrayList<>();
+
     private double price;
     private double totalCost;
 
-    public Basket(int items, double price, double totalCost) {
-        this.items = items;
+    public Basket(double price, double totalCost) {
         this.price = price;
         this.totalCost = totalCost;
     }
 
-    private List<Itemable> itemList = new ArrayList<>();
-
-    public double getTotalCost() {
-        return this.totalCost;
+    public int getItemCount() {
+        return this.itemList.size();
     }
 
     public double getPrice() {
-        return this.price;
+        int i;
+        double sum = 0;
+        for (i = 0; i < itemList.size(); i++) {
+            sum += itemList.get(i);
+        }
+        price = sum;
+        return price;
     }
 
-    public int getItems() {
-        return this.items;
-    }
-
-    public double calculateTotal() {
+    public double getTotalCost() {
         totalCost = price;
-        return totalCost;
+        return this.totalCost;
     }
 
 }

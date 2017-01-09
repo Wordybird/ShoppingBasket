@@ -10,27 +10,22 @@ public class BasketTest {
 
     @Before
     public void before() {
-        basket = new Basket(0, 2.75, 0.00);
+        basket = new Basket(0.00, 2.75);
     }
 
     @Test
     public void basketIsEmpty () {
-        assertEquals(0, basket.getItems());
+        assertEquals(0, basket.getItemCount());
     }
 
     @Test
-    public void priceIsNotZero () {
-        assertEquals(2.75, basket.getPrice(), 0.01);
+    public void priceIsZero () {
+        assertEquals(0.00, basket.getPrice(), 0.01);
     }
 
     @Test
-    public void totalIsZero () {
+    public void totalPriceMatchesItemPrice () {
         assertEquals(0.00, basket.getTotalCost(), 0.01);
-    }
-
-    @Test
-    public void totalIsCalculated() {
-        assertEquals(2.75, basket.calculateTotal(), 0.01);
     }
 
 }
