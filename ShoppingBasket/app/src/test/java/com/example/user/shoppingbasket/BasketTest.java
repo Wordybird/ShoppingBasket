@@ -10,7 +10,7 @@ public class BasketTest {
 
     @Before
     public void before() {
-        basket = new Basket(0, 0, 0);
+        basket = new Basket(0, 2.75, 0.00);
     }
 
     @Test
@@ -19,15 +19,18 @@ public class BasketTest {
     }
 
     @Test
-    public void priceIsZero () {
-        assertEquals(0.00, basket.getPrice(), 0.001);
+    public void priceIsNotZero () {
+        assertEquals(2.75, basket.getPrice(), 0.01);
     }
 
     @Test
     public void totalIsZero () {
-        assertEquals(0.00, basket.getTotalCost(), 0.001);
+        assertEquals(0.00, basket.getTotalCost(), 0.01);
     }
 
-
+    @Test
+    public void totalIsCalculated() {
+        assertEquals(2.75, basket.calculateTotal(), 0.01);
+    }
 
 }

@@ -3,8 +3,8 @@ package com.example.user.shoppingbasket;
 public class Basket {
 
     private int items;
-    private double totalCost;
     private double price;
+    private double totalCost;
 
     public Basket(int items, double price, double totalCost) {
         this.items = items;
