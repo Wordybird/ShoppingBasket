@@ -27,6 +27,13 @@ public class Basket {
         itemList.remove(item);
     }
 
+    public Itemable emptyBasket() {
+        if (getItemCount() > 0) {
+            return itemList.remove(0);
+        }
+        return null;
+    }
+
 //    public double getPrice() {
 //        int i;
 //        double sum = 0;

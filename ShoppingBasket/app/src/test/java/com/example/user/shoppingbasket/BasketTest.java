@@ -32,6 +32,13 @@ public class BasketTest {
         assertEquals(0, basket.getItemCount());
     }
 
+    @Test
+    public void canEmptyBasket() {
+        basket.addItem(item);
+        basket.emptyBasket();
+        assertEquals(0, basket.getItemCount());
+    }
+
 //    @Test
 //    public void priceIsZeroAtStart () {
 //        assertEquals(0.00, basket.getPrice(), 0.01);
