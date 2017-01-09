@@ -24,4 +24,9 @@ public class Basket {
         return this.items;
     }
 
+    public double calculateTotal() {
+        totalCost = price;
+        return totalCost;
+    }
+
 }
