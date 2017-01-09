@@ -18,4 +18,16 @@ public class BasketTest {
         assertEquals(0, basket.getItems());
     }
 
+    @Test
+    public void priceIsZero () {
+        assertEquals(0.00, basket.getPrice(), 0.001);
+    }
+
+    @Test
+    public void totalIsZero () {
+        assertEquals(0.00, basket.getTotalCost(), 0.001);
+    }
+
+
+
 }
