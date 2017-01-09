@@ -7,10 +7,11 @@ import static org.junit.Assert.assertEquals;
 public class BasketTest {
 
     Basket basket;
+    Item item;
 
     @Before
     public void before() {
-        basket = new Basket(0.00, 2.75);
+        basket = new Basket(0.00, 0.00);
     }
 
     @Test
@@ -19,9 +20,22 @@ public class BasketTest {
     }
 
     @Test
-    public void priceIsZero () {
-        assertEquals(0.00, basket.getPrice(), 0.01);
+    public void canAddToBasket () {
+        basket.addItem(item);
+        assertEquals(1, basket.getItemCount());
     }
+
+    @Test
+    public void canTakeFromBasket () {
+        basket.addItem(item);
+        basket.takeItem(item);
+        assertEquals(0, basket.getItemCount());
+    }
+
+//    @Test
+//    public void priceIsZeroAtStart () {
+//        assertEquals(0.00, basket.getPrice(), 0.01);
+//    }
 
     @Test
     public void totalPriceMatchesItemPrice () {
