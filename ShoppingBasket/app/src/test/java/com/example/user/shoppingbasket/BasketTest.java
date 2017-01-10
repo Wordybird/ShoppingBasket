@@ -76,44 +76,5 @@ public class BasketTest {
         assertEquals(27.23, basket.getDiscount(), 0.1);
     }
 
-    @Test
-    public void costCalculatesEmployeeDiscountTrue () {
-        basket.loyaltyCard = true;
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.getTotalCost();
-        basket.getDiscount();
-        assertEquals(25.86, basket.loyaltyDiscount(), 0.1);
-    }
-
-    @Test
-    public void costCalculatesEmployeeDiscountFalse () {
-        basket.loyaltyCard = false;
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.addItem(item);
-        basket.getTotalCost();
-        basket.getDiscount();
-        assertEquals(27.23, basket.loyaltyDiscount(), 0.1);
-    }
 
 }
