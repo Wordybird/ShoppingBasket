@@ -39,14 +39,18 @@ public class Basket {
             sum += itemList.get(i).price();
             if (i > 1)
                 continue;
-            if (sum == itemList.get(i).price() * 2) {
+            else if (sum == itemList.get(i).price() * 2) {
                 sum = sum / 2;
-            }
-            if (sum >= 20) {
-                sum = sum - (sum * 0.1);
             }
         }
         totalCost = sum;
+        return totalCost;
+    }
+
+    public double getDiscount() {
+        if (totalCost >=20) {
+            totalCost = totalCost - (totalCost / 10);
+        }
         return totalCost;
     }
 

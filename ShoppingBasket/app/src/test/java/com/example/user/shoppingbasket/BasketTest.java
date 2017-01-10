@@ -67,7 +67,14 @@ public class BasketTest {
         basket.addItem(item);
         basket.addItem(item);
         basket.addItem(item);
-        assertEquals(13.75, basket.getTotalCost(), 0.01);
+        basket.addItem(item);
+        basket.addItem(item);
+        basket.addItem(item);
+        basket.addItem(item);
+        basket.addItem(item);
+        basket.addItem(item);
+        basket.getTotalCost();
+        assertEquals(27.23, basket.getDiscount(), 0.1);
     }
 
 }
