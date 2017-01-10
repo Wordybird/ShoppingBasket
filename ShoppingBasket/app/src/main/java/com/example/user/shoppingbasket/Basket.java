@@ -7,10 +7,12 @@ public class Basket {
 
     private List<Itemable> itemList = new ArrayList<>();
     private double totalCost;
+    public boolean loyaltyCard;
 
     public Basket(double totalCost) {
         this.totalCost = totalCost;
         this.itemList = new ArrayList<>();
+        this.loyaltyCard = false;
     }
 
     public int getItemCount() {
@@ -49,7 +51,14 @@ public class Basket {
 
     public double getDiscount() {
         if (totalCost >=20) {
-            totalCost = totalCost - (totalCost / 10);
+            totalCost = totalCost - (totalCost/10);
+        }
+        return totalCost;
+    }
+
+    public double loyaltyDiscount() {
+        if (loyaltyCard) {
+            totalCost = totalCost - (totalCost/20);
         }
         return totalCost;
     }
