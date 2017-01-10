@@ -37,6 +37,9 @@ public class Basket {
         double sum = 0;
         for (i = 0; i < itemList.size(); i++) {
             sum += itemList.get(i).price();
+            if (sum == itemList.get(i).price() * 2) {
+                sum = sum / 2;
+            }
         }
         totalCost = sum;
         return totalCost;

@@ -48,8 +48,14 @@ public class BasketTest {
     @Test
     public void totalCostCalculatesCorrectly () {
         basket.addItem(item);
+        assertEquals(2.75, basket.getTotalCost(), 0.01);
+    }
+
+    @Test
+    public void costCalculatesBOGOF () {
         basket.addItem(item);
-        assertEquals(5.50, basket.getTotalCost(), 0.01);
+        basket.addItem(item);
+        assertEquals(2.75, basket.getTotalCost(), 0.01);
     }
 
 }
