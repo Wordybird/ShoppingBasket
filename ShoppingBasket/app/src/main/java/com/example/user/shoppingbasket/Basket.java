@@ -6,11 +6,11 @@ import java.util.List;
 public class Basket {
 
     private List<Itemable> itemList = new ArrayList<>();
-
     private double totalCost;
 
     public Basket(double totalCost) {
         this.totalCost = totalCost;
+        this.itemList = new ArrayList<>();
     }
 
     public int getItemCount() {
@@ -33,12 +33,12 @@ public class Basket {
     }
 
     public double getTotalCost() {
-//        int i;
-//        double sum = 0;
-//        for (i = 0; i < itemList.size(); i++) {
-//            sum += itemList.get(i);
-//        }
-//        totalCost = sum;
+        int i;
+        double sum = 0;
+        for (i = 0; i < itemList.size(); i++) {
+            sum += itemList.get(i).price();
+        }
+        totalCost = sum;
         return totalCost;
     }
 

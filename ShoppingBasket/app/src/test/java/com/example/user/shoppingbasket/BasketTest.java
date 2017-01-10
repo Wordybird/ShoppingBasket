@@ -12,6 +12,7 @@ public class BasketTest {
     @Before
     public void before() {
         basket = new Basket(0.00);
+        item = new Item();
     }
 
     @Test
@@ -48,7 +49,7 @@ public class BasketTest {
     public void totalCostCalculatesCorrectly () {
         basket.addItem(item);
         basket.addItem(item);
-        assertEquals(0.00, basket.getTotalCost(), 0.01);
+        assertEquals(5.50, basket.getTotalCost(), 0.01);
     }
 
 }
