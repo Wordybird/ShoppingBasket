@@ -8,11 +8,12 @@ public class BasketTest {
 
     Basket basket;
     Item item;
+    Itemable itemable;
 
     @Before
     public void before() {
         basket = new Basket(0.00);
-        item = new Item();
+        item = new Item();;
     }
 
     @Test
@@ -56,6 +57,17 @@ public class BasketTest {
         basket.addItem(item);
         basket.addItem(item);
         assertEquals(2.75, basket.getTotalCost(), 0.01);
+    }
+
+    @Test
+    public void costCalculatesDiscount () {
+        basket.addItem(item);
+        basket.addItem(item);
+        basket.addItem(item);
+        basket.addItem(item);
+        basket.addItem(item);
+        basket.addItem(item);
+        assertEquals(13.75, basket.getTotalCost(), 0.01);
     }
 
 }
