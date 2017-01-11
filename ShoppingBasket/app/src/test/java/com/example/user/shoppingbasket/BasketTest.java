@@ -73,7 +73,7 @@ public class BasketTest {
         basket.addItem(item);
         basket.addItem(item);
         basket.getTotalCost();
-        assertEquals(27.23, basket.getDiscount(), 0.1);
+        assertEquals(27.23, basket.getDiscount(), 0.01);
     }
 
     @Test
@@ -93,7 +93,7 @@ public class BasketTest {
         basket.addItem(item);
         basket.getTotalCost();
         basket.getDiscount();
-        assertEquals(25.86, basket.loyaltyDiscount(), 0.1);
+        assertEquals(26.69, basket.loyaltyDiscount(), 0.01);
     }
 
     @Test
@@ -113,7 +113,7 @@ public class BasketTest {
         basket.addItem(item);
         basket.getTotalCost();
         basket.getDiscount();
-        assertEquals(27.23, basket.loyaltyDiscount(), 0.1);
+        assertEquals(27.23, basket.loyaltyDiscount(), 0.01);
     }
 
 }

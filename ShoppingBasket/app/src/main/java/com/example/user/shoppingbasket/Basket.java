@@ -58,7 +58,7 @@ public class Basket {
 
     public double loyaltyDiscount() {
         if (loyaltyCard) {
-            totalCost = totalCost - (totalCost/20);
+            totalCost = totalCost - (totalCost * 0.02);
         }
         return totalCost;
     }
